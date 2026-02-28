@@ -1,0 +1,19 @@
+{
+  "name": "satloop-contracts",
+  "version": "1.0.0",
+  "description": "SatLoop leveraged loop staker contracts – Bitcoin L1 / OP_NET",
+  "scripts": {
+    "build:satyield":  "npx asc src/SatYield.ts  --outFile build/SatYield.wasm  --textFile build/SatYield.wat  --optimize --runtime stub",
+    "build:vault":     "npx asc src/VaultToken.ts --outFile build/VaultToken.wasm --textFile build/VaultToken.wat --optimize --runtime stub",
+    "build:satloop":   "npx asc src/SatLoop.ts   --outFile build/SatLoop.wasm   --textFile build/SatLoop.wat   --optimize --runtime stub",
+    "build":           "npm run build:satyield && npm run build:vault && npm run build:satloop",
+    "deploy":          "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "@btc-vision/btc-runtime": "^1.0.0",
+    "@btc-vision/opnet": "^1.0.0"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.27.0"
+  }
+}

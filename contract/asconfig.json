@@ -1,0 +1,22 @@
+{
+  "targets": {
+    "satloop": {
+      "binaryFile": "build/SatLoop.wasm",
+      "textFile":   "build/SatLoop.wat",
+      "optimizeLevel": 3,
+      "shrinkLevel":   1,
+      "entry": "src/SatLoop.ts"
+    },
+    "satyield": {
+      "binaryFile": "build/SatYield.wasm",
+      "entry": "src/SatYield.ts"
+    },
+    "vaulttoken": {
+      "binaryFile": "build/VaultToken.wasm",
+      "entry": "src/VaultToken.ts"
+    }
+  },
+  "options": {
+    "runtime": "stub"
+  }
+}
